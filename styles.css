@@ -1,0 +1,185 @@
+body{
+    background-color: linen;
+    color: black;
+    overflow: hidden;
+    background-image: url(website-background-patterns-png-4.png);
+    font-family: Roboto;
+}
+.logo{
+    font-size: larger;
+    color: white;
+    font-weight: 900;
+    font-style: oblique;
+    text-decoration: none;
+    position: absolute;
+    left: 10vw;
+    top: 3.5vh;
+}
+.logo:hover{
+    cursor:pointer;
+}
+.logo:active{
+    cursor:none;
+    transform: scale(1.2);
+    transition: transform 500ms ease-in-out;
+    color: white;
+}
+.navbar{
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 5vh;
+}
+.navbar-links{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 60vw;
+}
+.navbar-links li{
+    margin-right: 50px;
+}
+.navbar-links a{
+    color: white;
+    font-style: oblique;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav-toggle{
+    visibility: hidden;
+}
+
+
+@media(max-width: 1000px){
+    .navbar-links{
+        flex-direction: column;
+        position: fixed;
+        inset: 10vh 0 0 69vw ;
+        width: 30vw;
+        padding-top: 50px;
+        background-color: hsl(0, 0, 0, 0.1);
+        backdrop-filter: blur(100px);
+        transform: translateX(200%);
+        transition: transform .5s ease-in-out;
+        z-index: 1000;
+    }
+
+    .navbar-links li{
+        padding-bottom: 10px;
+        padding-left: 20px;
+    }
+
+    .navbar-links a{
+        color: red;
+        font-style: oblique;
+        font-weight: 700;
+    }
+    .nav-toggle{
+        visibility: visible;
+        position: absolute;
+        background: url(icons8-hamburger-48.png);
+        width: 48px;
+        height: 48px;
+        border: 0;
+        margin-left: 90vw;
+        margin-right: 5vw;
+        background-color:transparent;
+    }
+    .nav-toggle:hover{
+        cursor: pointer;
+        transform: scale(1.2);
+        
+    }
+    .navbar-links[data-visible="true"]{
+        transform: translateX(0%);
+    }
+    .mainmenutext{
+        position: absolute;
+        top: 20vh;
+        left: 10vw;
+        width: 60vh;
+        height: 35vh;
+    }
+    
+}
+@media(max-width: 550px){
+    .mainmenuimage{
+        display: none;
+    }
+}
+
+.mainpage{
+    background: transparent;
+    font-family: Roboto;
+}
+.mainmenutext{
+    position: absolute;
+    top: 20vh;
+    left: 10vw;
+    width: 60vh;
+    height: 35vh;
+}
+.mainmenuimage img{
+    position: absolute;
+    left: 60vw;
+    top: 25vh;
+    height: 500px;
+    z-index: 0;
+}
+.tile button img{
+    width: 70px;
+    height: 70px;
+}
+.tile{
+    display: flex;
+    position: absolute;
+    top: 80vh;
+    left: 10vw;
+}
+.burgerbutton{
+    background: transparent;
+    border: 1px solid red;
+    margin-right: 5px;
+}
+.burgerbutton:active{
+    border: 1px solid red;
+}
+.burgerbutton:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.mainmenutext button{
+    border: 1px solid red;
+    background: red;
+    color: white;
+    height: 50px;
+    width: 100px;
+}
+.mainmenutext button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    border: 1px solid white;
+}
+.DELICIOUS{
+    font-family: 'Archivo Black';
+    color:orange;
+    font-size: 30px;
+}
+.MOUTHWATERING{
+    font-family: 'Archivo Black';
+    color: tomato;
+    font-size: 30px;
+}
+.BURGERS{
+    font-family: 'Archivo Black';
+    color:crimson;
+    font-size: 30px;
+}
+.sr-only{
+    visibility: hidden;
+}
